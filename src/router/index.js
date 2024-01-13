@@ -49,12 +49,12 @@ const router = createRouter({
     {
       path: '/blocked-users',
       name: 'blockedUsers.index',
-      component: () => import('../views/blockedUsersIndex.vue')
+      component: () => import('../views/BlockedUsersIndex.vue')
     },
     {
       path: '/taps',
       name: 'taps.index',
-      component: () => import('../views/tapsIndex.vue')
+      component: () => import('../views/TapsIndex.vue')
     },
     {
       path: '/preferences/me',
