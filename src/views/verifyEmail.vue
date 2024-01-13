@@ -12,7 +12,7 @@ const form = reactive({
 });
 
 const submit = function () {
-  fetch('http://localhost/api/register', {
+  fetch('http://6rtdeonrt.laravel-sail.site:8080/api/register', {
     body: JSON.stringify(form),
     method: 'POST',
     headers: {

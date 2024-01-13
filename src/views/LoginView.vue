@@ -11,7 +11,7 @@ const form = reactive({
 });
 
 const submit = function () {
-  fetch('http://localhost/api/login', {
+  fetch('http://6rtdeonrt.laravel-sail.site:8080/api/login', {
     body: JSON.stringify(form),
     method: 'POST',
     headers: {
@@ -25,7 +25,7 @@ const submit = function () {
 
       console.log(res.user);
 
-      // router.push({ name: 'users.index' })
+      router.push({ name: 'users.index' })
     });
   }).catch(err => {
     console.error(err);

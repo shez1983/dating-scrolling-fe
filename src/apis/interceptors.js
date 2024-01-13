@@ -4,7 +4,7 @@ import router from '../router'
 
 // const router = useRouter()
 
-const API_URL = 'http://localhost/api'
+const API_URL = 'http://6rtdeonrt.laravel-sail.site:8080/api'
     // process.env.NODE_ENV === 'development'
     //     ? 'http://localhost/api'
     //     : 'todo'; //@todo
