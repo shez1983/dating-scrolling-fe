@@ -26,6 +26,11 @@ const router = createRouter({
       component: () => import('../views/verifyEmail.vue')
     },
     {
+      path: '/feedback',
+      name: 'feedback.create',
+      component: () => import('../views/FeedbackCreateView.vue')
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('../views/LoginView.vue')
@@ -33,14 +38,29 @@ const router = createRouter({
     {
       path: '/users',
       name: 'users.index',
-      component: () => import('../views/UsersView.vue')
+      component: () => import('../views/UsersIndexView.vue')
     },
     {
       path: '/users/:username',
       name: 'users.show',
       // route level code-splitting
-      component: () => import('../views/UserView.vue')
-    }
+      component: () => import('../views/UsersShowView.vue')
+    },
+    {
+      path: '/blocked-users',
+      name: 'blockedUsers.index',
+      component: () => import('../views/blockedUsersIndex.vue')
+    },
+    {
+      path: '/taps',
+      name: 'taps.index',
+      component: () => import('../views/tapsIndex.vue')
+    },
+    {
+      path: '/preferences/me',
+      name: 'preferences.show',
+      component: () => import('../views/preferencesEdit.vue')
+    },
   ]
 })
 

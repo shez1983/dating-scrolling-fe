@@ -11,9 +11,8 @@ const getUsers = function () {
   }
 
   Service
-      .get(`users?page=$(nextPage.value)`)
+      .get('users?page=' + nextPage.value)
       .then((res) => {
-        console.log(res.data)
         users.push(...res.data.data);
         nextPage.value = res.data.links.next;
       })
@@ -41,6 +40,7 @@ window.onscroll = () => {
 <template>
   <div class="users">
     <h1>Users</h1>
+
     <table>
       <tr v-for="user in users" :key="user.id">
         <td>{{ user.username }}</td>

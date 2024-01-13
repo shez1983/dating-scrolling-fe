@@ -21,7 +21,11 @@ const submit = function () {
   }).then(response => {
     response.json().then(function (res) {
       localStorage.setItem('token', res.token);
-      router.push({ name: 'users.index' })
+      localStorage.setItem('user',  JSON.stringify(res.user));
+
+      console.log(res.user);
+
+      // router.push({ name: 'users.index' })
     });
   }).catch(err => {
     console.error(err);
