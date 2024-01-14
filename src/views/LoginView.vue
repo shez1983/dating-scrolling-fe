@@ -11,7 +11,7 @@ const form = reactive({
 });
 
 const submit = function () {
-  fetch('http://6rtdeonrt.laravel-sail.site:8080/api/login', {
+  fetch('http://mm-shez-mm.laravel-sail.site:8080/api/login', {
     body: JSON.stringify(form),
     method: 'POST',
     headers: {
