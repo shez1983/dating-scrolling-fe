@@ -14,7 +14,7 @@ const form = reactive({
 let response = ref(null);
 
 const submit = function () {
-  fetch('http://mm-shez-mm.laravel-sail.site:8080/api/register', {
+  fetch(import.meta.env.VITE_API_URL + 'register', {
     body: JSON.stringify(form),
     method: 'POST',
     headers: {

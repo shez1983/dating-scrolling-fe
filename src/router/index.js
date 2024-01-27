@@ -47,6 +47,12 @@ const router = createRouter({
       component: () => import('../views/UsersShowView.vue')
     },
     {
+      path: '/profiles/me',
+      name: 'profile.edit',
+      // route level code-splitting
+      component: () => import('../views/UsersEditView.vue')
+    },
+    {
       path: '/blocked-users',
       name: 'blockedUsers.index',
       component: () => import('../views/BlockedUsersIndex.vue')
@@ -57,9 +63,24 @@ const router = createRouter({
       component: () => import('../views/TapsIndex.vue')
     },
     {
+      path: '/favourites',
+      name: 'favourites.index',
+      component: () => import('../views/FavouritesIndex.vue')
+    },
+    {
       path: '/preferences/me',
       name: 'preferences.show',
       component: () => import('../views/preferencesEdit.vue')
+    },
+    {
+      path: '/inboxes',
+      name: 'inboxes.index',
+      component: () => import('../views/InboxesIndexView.vue')
+    },
+    {
+      path: '/inboxes/:id',
+      name: 'inboxes.show',
+      component: () => import('../views/InboxesShowView.vue')
     },
   ]
 })
